@@ -1,5 +1,6 @@
 import './styles/antd.css'
 import './styles/index.scss'
+import './styles/index.css'
 
 import App from 'components/App'
 import Network from 'Network'

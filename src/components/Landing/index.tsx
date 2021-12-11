@@ -134,14 +134,7 @@ export default function Landing() {
                   </Trans>
                 </div>
 
-                <div
-                  style={{
-                    display: 'grid',
-                    gridAutoFlow: 'row',
-                    rowGap: 8,
-                    fontWeight: 600,
-                  }}
-                >
+                <div className="grid gap-2 font-medium">
                   <p style={{ color: colors.text.brand.primary, opacity: 1 }}>
                     <Trans>Built for:</Trans>
                   </p>

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.4.3",
     "@jbx-protocol/contracts": "^0.0.2",
     "@lingui/detect-locale": "^3.13.0",
     "@lingui/react": "^3.13.0",
@@ -43,9 +44,9 @@
   },
   "scripts": {
     "compile-styles": "lessc ./src/styles/antd.less ./src/styles/antd.css --js",
-    "start": "yarn compile-styles && react-scripts start",
-    "build": "yarn compile-styles && react-scripts build",
-    "test": "yarn compile-styles && react-scripts test",
+    "start": "yarn compile-styles && craco start",
+    "build": "yarn compile-styles && craco build",
+    "test": "yarn compile-styles && craco test",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ./",
     "lint:fix": "yarn lint --fix",
@@ -56,7 +57,7 @@
     "postinstall": "yarn i18n:extract && yarn i18n:compile"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css}": [
+    "src/**/*.{js,jsx,ts,tsx,json}": [
       "eslint",
       "prettier --write"
     ]
@@ -81,11 +82,14 @@
     "@types/react": "^17",
     "@types/react-dom": "^17",
     "@types/react-router-dom": "^5.1.7",
+    "autoprefixer": "^9",
     "eslint-config-react-app": "^6.0.0",
     "eslint-plugin-import": "^2.25.3",
     "husky": "^7.0.0",
     "less": "^4.1.1",
     "lint-staged": "^12.1.1",
-    "prettier": "2.4.1"
+    "postcss": "^7",
+    "prettier": "2.4.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }
